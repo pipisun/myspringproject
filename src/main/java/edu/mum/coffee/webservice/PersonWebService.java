@@ -45,12 +45,13 @@ public class PersonWebService {
 		return "redirect:/admin";
 	}
 
-	@RequestMapping("/listPersons")
+	@RequestMapping("/listPerson")
 	public String listProductPage(Map<String, Object> map) {
 		List<Person> findAllPersons = personService.findAllPersons();
 		map.put("persons", findAllPersons);
 		return "listPersons";
 	}
+	
 	@RequestMapping("/listOrder")
 	public String listOrderPage(Map<String, Object> map) {
 		List<Order> orders = orderService.findAll();
@@ -77,6 +78,6 @@ public class PersonWebService {
 	public String updatePersonAndSavePage(Person person) {
 		personService.savePerson(person);
 		System.out.println(person);
-		return "redirect:/admin/listPersons";
+		return "redirect:/admin/listPerson";
 	}
 }

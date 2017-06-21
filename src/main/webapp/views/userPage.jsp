@@ -7,13 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="/user/profile">profile</a>
+	<a href="/user/profile">Profile</a>
 	<br />
-	<br /> orders:
+	<br /> Order:
 	<br />
 	<a href="/user/createOrder">Create</a>
 	<br />
 	<br />
-	<a href="/login">logout</a>
+	<a href="/login">Log out</a>
 </body>
 </html>

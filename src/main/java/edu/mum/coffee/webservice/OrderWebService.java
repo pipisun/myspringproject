@@ -42,14 +42,14 @@ public class OrderWebService {
 
 	@RequestMapping("/saveOrder")
 	public String saveProductPage(@ModelAttribute(value = "order") Order order) {
-		System.out.println(order);
+		System.out.println("order:" + order);
 		orderService.save(order);
 		return "redirect:/user";
 	}
 	
 	@RequestMapping("/profile")
 	public String profilePage(Map<String,Object> map) {
-		List<Person> findByEmail = personService.findByEmail("abc@abc.com");
+		List<Person> findByEmail = personService.findByEmail("f.l@abc.com");
 		map.put("person", findByEmail.get(0));
 		return "profile";
 	}

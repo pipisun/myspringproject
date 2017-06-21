@@ -41,13 +41,13 @@ public class ProductServiceTest {
 			ProductType productType = null;
 			switch (i % 3) {
 			case 0:
-				productType = ProductType.BREAKFAST;
+				productType = ProductType.Breakfast;
 				break;
 			case 1:
-				productType = ProductType.LUNCH;
+				productType = ProductType.Lunch;
 				break;
 			default:
-				productType = ProductType.DINNER;
+				productType = ProductType.Dinner;
 			}
 			product.setProductType(productType);
 			testProduct[i] = product;

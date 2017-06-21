@@ -10,22 +10,22 @@
 </head>
 <body>
 <c:if test="${empty requestScope.persons }">
-	No products!
+	No person!
 </c:if>
 <c:if test="${!empty requestScope.persons }">
 	<table><tr>
-			<th>id</th>
-			<th>firstName</th>
-			<th>lastName</th>
-			<th>email</th>
-			<th>phone</th>
-			<th>city</th>
-			<th>state</th>
-			<th>country</th>
-			<th>zipcode</th>
-			<th>enable</th>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Phone number</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Country</th>
+			<th>ZIP code</th>
+			<th>Enable</th>
 		</tr>
-		<c:forEach items="${requestScope.persons }" var="person">
+		<c:forEach items="${requestScope.persons}" var="person">
 		<tr>
 			<td>${person.id} </td>			
 			<td>${person.firstName} </td>			
@@ -37,11 +37,11 @@
 			<td>${person.address.country} </td>			
 			<td>${person.address.zipcode} </td>			
 			<td>${person.enable} </td>			
-			<td><a href="/admin/updatePerson/${person.id }">update</a></td>			
+			<td><a href="/admin/updatePerson/${person.id}">Update</a></td>			
 		</tr>
 		</c:forEach>
 	</table>
 </c:if>
-<a href="/admin">go home</a>
+<a href="/admin">Go back</a>
 </body>
 </html>

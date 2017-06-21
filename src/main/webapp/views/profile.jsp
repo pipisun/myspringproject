@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Update Person</title>
+<title>Edit Profile</title>
 </head>
 <body>
-	<form:form modelAttribute="person" action="/admin/updatePersonAndSave">
+	<form:form modelAttribute="person" action="/user/updateProfile">
 		<c:if test="${person.id != null }">
 			<form:hidden path="id" />
 		</c:if>
@@ -20,15 +20,15 @@
 			</tr>
 			<tr>
 				<td><form:label path="lastName">Last Name:</form:label></td>
-				<td><form:input path="lastName" value="${person.lastName}" /></td>
+				<td><form:input path="lastName" value="${person.lastName }" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="email">Email:</form:label></td>
-				<td><form:input path="email" value="${person.email}" /></td>
+				<td><form:input path="email" value="${person.email }" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="phone">Phone number:</form:label></td>
-				<td><form:input path="phone" value="${person.phone}" /></td>
+				<td><form:input path="phone" value="${person.phone }" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="address.city">City:</form:label></td>
@@ -46,7 +46,7 @@
 						value="${person.address.country}" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="address.zipcode">ZIP code:</form:label></td>
+				<td><form:label path="address.zipcode">ZIP Code:</form:label></td>
 				<td><form:input path="address.zipcode"
 						value="${person.address.zipcode}" /></td>
 			</tr>
@@ -55,7 +55,7 @@
 				<td><form:checkbox path="enable" value="${person.enable}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Update Person" /></td>
+				<td colspan="2"><input type="submit" value="Update Profile" /></td>
 			</tr>
 		</table>
 	</form:form>

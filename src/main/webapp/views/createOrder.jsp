@@ -5,53 +5,53 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Place Order</title>
 </head>
 <body>
-	<form:form modelAttribute="order" action="saveOrder">
+	<form:form modelAttribute="order" action="/user/saveOrder">
 		<table>
 			<tr>
-				<td><form:label path="orderDate">orderDate:</form:label></td>
+				<td><form:label path="orderDate">Order Date:</form:label></td>
 				<td><form:input path="orderDate" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.firstName">firstName:</form:label></td>
+				<td><form:label path="person.firstName">First Name:</form:label></td>
 				<td><form:input path="person.firstName" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.lastName">lastName:</form:label></td>
+				<td><form:label path="person.lastName">Last Name:</form:label></td>
 				<td><form:input path="person.lastName" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.email">email:</form:label></td>
+				<td><form:label path="person.email">Email:</form:label></td>
 				<td><form:input path="person.email" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.phone">phone:</form:label></td>
+				<td><form:label path="person.phone">Phone number:</form:label></td>
 				<td><form:input path="person.phone" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.enable">enable</form:label></td>
+				<td><form:label path="person.enable">Enable</form:label></td>
 				<td><form:checkbox path="person.enable" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.address.city">city:</form:label></td>
+				<td><form:label path="person.address.city">City:</form:label></td>
 				<td><form:input path="person.address.city" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.address.state">state:</form:label></td>
+				<td><form:label path="person.address.state">State:</form:label></td>
 				<td><form:input path="person.address.state" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.address.country">country:</form:label></td>
+				<td><form:label path="person.address.country">Country:</form:label></td>
 				<td><form:input path="person.address.country" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="person.address.zipcode">zipcode:</form:label></td>
+				<td><form:label path="person.address.zipcode">ZIP code:</form:label></td>
 				<td><form:input path="person.address.zipcode" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="saveProduct" /></td>
+				<td colspan="2"><input type="submit" value="Create Order" /></td>
 			</tr>
 		</table>
 	</form:form>

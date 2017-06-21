@@ -6,27 +6,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Orders Details</title>
 </head>
 <body>
 <c:if test="${empty requestScope.orders }">
-	No products!
+	No order!
 </c:if>
 <c:if test="${!empty requestScope.orders }">
 	<table><tr>
 			<th>id</th>
-			<th>orderDate</th>
-			<th>firstName</th>
-			<th>lastName</th>
-			<th>email</th>
-			<th>phone</th>
-			<th>city</th>
-			<th>state</th>
-			<th>country</th>
-			<th>zipcode</th>
-			<th>enable</th>
+			<th>Order Date</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Phone number</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Country</th>
+			<th>ZIP code</th>
+			<th>Enable</th>
 		</tr>
-		<c:forEach items="${requestScope.orders }" var="order">
+		<c:forEach items="${requestScope.orders}" var="order">
 		<tr>
 			<td>${order.id} </td>			
 			<td>${order.orderDate} </td>			
@@ -43,6 +43,6 @@
 		</c:forEach>
 	</table>
 </c:if>
-<a href="/admin">go home</a>
+<a href="/admin">Go back</a>
 </body>
 </html>
