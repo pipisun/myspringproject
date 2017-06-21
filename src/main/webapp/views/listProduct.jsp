@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>List of Products</title>
 </head>
 <body>
 <c:if test="${empty requestScope.products }">
@@ -16,16 +16,16 @@
 	<table><tr>
 			<th>Id</th>
 			<th>Product Name</th>
-			<th>Description</th>
 			<th>Price</th>
-			<th>Product Type</th>
+			<th>Description</th>
+			<th>Type of Product</th>
 		</tr>
 		<c:forEach items="${requestScope.products}" var="product">
 		<tr>
 			<td>${product.id} </td>			
-			<td>${product.productName} </td>			
+			<td>${product.productName} </td>
+			<td>${product.price} </td>				
 			<td>${product.description} </td>			
-			<td>${product.price} </td>			
 			<td>${product.productType} </td>			
 			<td><a href="/product/updateProduct/${product.id}">Update</a></td>
 			<td><a href="/product/deleteProduct/${product.id}">Delete</a></td>			

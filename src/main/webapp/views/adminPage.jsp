@@ -13,12 +13,12 @@
 	<br />
 	<br /> 
 	Person:<br />
-	<a href="/person/createPerson">Create</a>&nbsp;&nbsp;
-	<a href="/person/listPerson">List of Person</a> 
+	<a href="/admin/createPerson">Create</a>&nbsp;&nbsp;
+	<a href="/admin/listPerson">List of Person</a> 
 	<br />
 	<br /> 
 	Order:<br />
-	<a href="/order/listOrder">List of Order</a>
+	<a href="/admin/listOrder">List of Order</a>
 	<br />
 	<br />
 	<a href="/login">Log out</a>

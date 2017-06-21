@@ -6,31 +6,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Product Update</title>
 </head>
 <body>
 	<form:form modelAttribute="product" action="/product/updateProductAndSave">
 		<c:if test="${product.id != null }">
-			id not null
 			<form:hidden path="id" />
 		</c:if>
 		<table>
+			<tr>
+				<td><form:label path="productName">Product Name:</form:label></td>
+				<td><form:input path="productName" value="${product.productName}" /></td>
+			</tr>
 			<tr>
 				<td><form:label path="price">Price:</form:label></td>
 				<td><form:input path="price" value="${product.price}" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="productName">Product Name:</form:label></td>
-				<td><form:input path="productName"
-						value="${product.productName }" /></td>
-			</tr>
-			<tr>
 				<td><form:label path="description">Description:</form:label></td>
-				<td><form:textarea path="description"
-						value="${product.description }" /></td>
+				<td><form:textarea path="description" value="${product.description }" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="productType">Product Type:</form:label></td>
+				<td><form:label path="productType">Type of Product:</form:label></td>
 				<td><form:select path="productType" items="${productType}" /></td>
 			</tr>
 			<tr>
