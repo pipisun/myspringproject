@@ -1,4 +1,4 @@
-package edu.mum.coffee.controller;
+package edu.mum.coffee.rest;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ import edu.mum.coffee.domain.ProductType;
 import edu.mum.coffee.repository.ProductRepository;
 import edu.mum.coffee.service.ProductService;
 
-@Controller
+@RestController
 @RequestMapping("/product")
 public class ProductController   {
 	

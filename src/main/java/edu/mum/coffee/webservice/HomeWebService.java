@@ -1,4 +1,4 @@
-package edu.mum.coffee.controller;
+package edu.mum.coffee.webservice;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import edu.mum.coffee.domain.ProductType;
 import edu.mum.coffee.service.ProductService;
 
 @Controller
-public class HomeController {
+public class HomeWebService {
 	
 	@GetMapping({"/", "/home"})
 	public String homePage() {

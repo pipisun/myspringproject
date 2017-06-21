@@ -1,4 +1,4 @@
-package edu.mum.coffee.controller;
+package edu.mum.coffee.rest;
 
 import java.util.Date;
 import java.util.List;
