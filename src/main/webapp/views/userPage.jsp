@@ -5,15 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<a href="/user/profile">Profile</a>
-	<br />
-	<br /> Order:
-	<br />
-	<a href="/user/createOrder">Create</a>
-	<br />
-	<br />
-	<a href="/login">Log out</a>
+	<div>
+		<a href="/user/profile">Profile</a>
+		<br />
+		<br /> Order:
+		<br />
+		<a href="/user/createOrder">Create</a>
+		<br />
+		<br />
+		<a href="/login">Log out</a>
+	</div>
 </body>
 </html>

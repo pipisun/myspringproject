@@ -7,8 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div>
 <c:if test="${empty requestScope.persons }">
 	No person!
 </c:if>
@@ -43,5 +45,6 @@
 	</table>
 </c:if>
 <a href="/admin">Go back</a>
+</div>
 </body>
 </html>

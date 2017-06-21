@@ -7,8 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Update Person</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div>
 	<form:form modelAttribute="person" action="/admin/updatePersonAndSave">
 		<c:if test="${person.id != null }">
 			<form:hidden path="id" />
@@ -59,5 +61,6 @@
 			</tr>
 		</table>
 	</form:form>
+	</div>
 </body>
 </html>

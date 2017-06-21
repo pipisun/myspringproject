@@ -7,8 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Product Update</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div>
 	<form:form modelAttribute="product" action="/product/updateProductAndSave">
 		<c:if test="${product.id != null }">
 			<form:hidden path="id" />
@@ -35,5 +37,6 @@
 			</tr>
 		</table>
 	</form:form>
+	</div>
 </body>
 </html>

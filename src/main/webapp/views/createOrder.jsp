@@ -6,8 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Place Order</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<div>
 	<form:form modelAttribute="order" action="/user/saveOrder">
 		<table>
 			<tr>
@@ -55,5 +57,6 @@
 			</tr>
 		</table>
 	</form:form>
+	</div>
 </body>
 </html>

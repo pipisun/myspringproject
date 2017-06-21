@@ -9,9 +9,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>You are in!</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
-<body><h1>You made it!</h1>
+<body>
+<div>
+<h1>You made it!</h1>
 <a href="<c:url value="/logout" />"> Now logout </a>
-
+</div>
 </body>
 </html>

@@ -5,8 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Coffee Shop Admin Page</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<div>
 	Product:<br />
 	<a href="/product/createProduct">Create</a>&nbsp;&nbsp;
 	<a href="/product/listProduct">List of Product</a>
@@ -22,5 +24,6 @@
 	<br />
 	<br />
 	<a href="/login">Log out</a>
+	</div>
 </body>
 </html>

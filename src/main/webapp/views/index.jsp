@@ -5,16 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-Product:<br/>
-<a href="/createProduct">Create</a>
-<a href="/listProduct">List</a><br/><br/>
-Person:<br/>
-<a href="/createPerson">Create</a>
-<a href="/listPerson">List</a>
-Order:<br/>
-<a href="/createOrder">Create</a>
-<a href="/listOrder">List orders</a><br/><br/>
+	<div>
+		Product:<br/>
+		<a href="/createProduct">Create</a>
+		<a href="/listProduct">List</a><br/><br/>
+		Person:<br/>
+		<a href="/createPerson">Create</a>
+		<a href="/listPerson">List</a>
+		Order:<br/>
+		<a href="/createOrder">Create</a>
+		<a href="/listOrder">List orders</a><br/><br/>
+	</div>
 </body>
 </html>

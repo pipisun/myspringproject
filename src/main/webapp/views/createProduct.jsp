@@ -6,8 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add Product</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div>
 <form:form modelAttribute="product" action="saveProduct">	
     <table>
       <tr>
@@ -31,5 +33,6 @@
       </tr>
     </table>
     </form:form>
+    </div>
 </body>
 </html>
