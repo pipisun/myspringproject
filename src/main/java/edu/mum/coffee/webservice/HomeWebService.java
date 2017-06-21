@@ -45,4 +45,8 @@ public class HomeWebService {
 		return "login";
 	}
 	
+	@RequestMapping("/login")
+	public String gotoLoginPage(){
+		return "login";
+	}	
 }
