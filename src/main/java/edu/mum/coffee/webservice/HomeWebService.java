@@ -26,7 +26,6 @@ public class HomeWebService {
 	public String indexPage() {
 		return "index";
 	}
-	
 
 	@GetMapping({"/secure"})
 	public String securePage() {
