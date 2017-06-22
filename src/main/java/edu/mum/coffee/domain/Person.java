@@ -19,9 +19,22 @@ public class Person {
 	private String email;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
+	
+//	private User user;
 	private String phone;
 	private boolean enable;
+	
+//	public User getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(User user) {
+//		this.user = user;
+//	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
 	public long getId() {
 		return id;
 	}

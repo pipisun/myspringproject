@@ -10,15 +10,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.mum.coffee.domain.Order;
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.domain.Product;
 import edu.mum.coffee.domain.ProductType;
+import edu.mum.coffee.domain.Users;
 import edu.mum.coffee.service.OrderService;
 import edu.mum.coffee.service.PersonService;
 import edu.mum.coffee.service.ProductService;
+import edu.mum.coffee.service.UsersService;
 
 @Controller
 @RequestMapping("/admin")
@@ -29,7 +32,10 @@ public class PersonWebService {
 	
 	@Autowired
 	public PersonService personService;
-
+	
+	@Autowired
+	public UsersService usersService;
+	
 	@GetMapping("/createPerson")
 	public ModelAndView createProductPage() {
 		ModelAndView modelAndView = new ModelAndView("createPerson");
@@ -79,5 +85,23 @@ public class PersonWebService {
 		personService.savePerson(person);
 		System.out.println(person);
 		return "redirect:/admin/listPerson";
+	}
+	
+	
+//	@ModelAttribute
+//	public void getUser(@RequestParam(value = "email", required = false) String email, Map<String, Object> map) {
+//		if(email != null){
+//			map.put("users",usersService.findByEmail(email));
+//		}
+//	}
+	
+	@RequestMapping("/registration")
+	public String signupUser(@ModelAttribute(value = "users") Users user) {
+		System.out.println(user);
+		Person person = new Person();
+		person.setEmail(user.getEmail());
+		personService.savePerson(person);
+		usersService.saveUser(user);
+		return "redirect:/login";
 	}
 }

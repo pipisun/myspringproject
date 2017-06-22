@@ -4,12 +4,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -47,9 +50,10 @@ public class OrderWebService {
 		return "redirect:/user";
 	}
 	
-	@RequestMapping("/profile")
-	public String profilePage(Map<String,Object> map) {
-		List<Person> findByEmail = personService.findByEmail("f.l@abc.com");
+	@RequestMapping(value="/profile", method=RequestMethod.GET)
+	public String profilePage(Map<String,Object> map, HttpServletRequest request) {
+		System.out.println("Email:" + request.getSession().getAttribute("email"));
+		List<Person> findByEmail = personService.findByEmail(request.getSession().getAttribute("email").toString());
 		map.put("person", findByEmail.get(0));
 		return "profile";
 	}
